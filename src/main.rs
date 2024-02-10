@@ -10,7 +10,7 @@ fn main() -> Result<(), slint::PlatformError> {
     let ui_handle = ui.as_weak();
     ui.on_divide_income(move |s| {
         let ui = ui_handle.unwrap();
-        let num = s.parse::<f64>().map_err(|e| e.to_string()).unwrap();
+        let num = s.parse::<f64>().or::<f64>(Ok(0.0)).unwrap();
 
         let tax = num * TAX_PER;
         let owner = num * OWNER_PER;
