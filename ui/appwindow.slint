@@ -1,6 +1,7 @@
 import { ButtonComponent } from "button_component.slint";
 import { LineEditComponent } from "line_edit_component.slint";
 import { TextComponent } from "text_component.slint";
+import { VerticalBoxComponent } from "vertical_box_component.slint";
 
 export component AppWindow inherits Window {
     background: #313e50;
@@ -15,6 +16,9 @@ export component AppWindow inherits Window {
         }
         Row {
             ButtonComponent {}
+        }
+        Row {
+            VerticalBoxComponent {}
         }
     }
 }
