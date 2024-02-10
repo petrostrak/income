@@ -1,7 +1,7 @@
 import { LineEdit, Button, VerticalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
-    property <string> results : "";
+    in property <string> results : "";
     callback divide-income(string);
 
     background: #313e50;
